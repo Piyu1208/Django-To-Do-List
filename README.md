@@ -22,7 +22,39 @@ A simple web-based To-Do List built with Django that allows users to register, l
 
 ## 📂 Project Structure
 
-todo/ # Root project folder │ ├── manage.py # Django's command-line utility ├── requirements.txt # Python dependencies ├── render.yaml # Configuration file for deploying on Render ├── db.sqlite3 # SQLite database (local development only) │ ├── todo/ # Main Django project directory │ ├── init.py │ ├── settings.py # Project settings (debug, apps, middleware, etc.) │ ├── urls.py # Root URL configurations │ ├── wsgi.py # WSGI entry point for deployment │ ├── todoapp/ # Core application directory │ ├── init.py │ ├── models.py # Task model (with user, name, status) │ ├── views.py # Views for login, registration, task CRUD │ ├── forms.py # Custom forms for Task and User │ ├── admin.py # (Optional) Admin panel setup │ ├── templates/ # Templates directory │ └── todoapp/ # All app-related HTML files │ ├── home.html # Main task page │ ├── login.html # Login form │ ├── register.html # User signup form │ ├── update_task.html # Update existing task │ └── delete.html # Confirm task deletion │ └── static/ #
+todo/
+├── manage.py
+├── requirements.txt
+├── render.yaml
+├── db.sqlite3
+├── .gitignore
+│
+├── todo/               ← Project config folder (settings, urls, wsgi)
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── todoapp/            ← Core app (tasks, forms, views)
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py         ← Optional: move your app-specific urls here
+│   └── views.py
+│
+│
+└── templates/
+    └── todoapp/
+        ├── home.html
+        ├── update_task.html
+        ├── delete.html
+        ├── login.html
+        └── register.html
+
 
 ## ✅ How to Run Locally
 
