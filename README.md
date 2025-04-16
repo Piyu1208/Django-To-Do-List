@@ -43,7 +43,7 @@ todo/
 │   ├── forms.py
 │   ├── models.py
 │   ├── tests.py
-│   ├── urls.py         ← Optional: move your app-specific urls here
+│   ├── urls.py         ← Moved the app-specific urls here
 │   └── views.py
 │
 │
